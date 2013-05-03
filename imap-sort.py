@@ -8,5 +8,13 @@ server.login(user,getpass.getpass())
 server.select_folder("inbox")
 data = server.search("*")
 
-data = server.fetch("1:*",['BODY[HEADER.FIELDS(SUBJECT FROM DATE)]'])
+data = server.fetch("ALL",['BODY[HEADER.FIELDS (SUBJECT FROM DATE)]'])
+from_key = 'BODY[HEADER.FIELDS (FROM)]'
+
+for key in data:
+     string = data[key][akey]
+     i1 = string.index("<")
+     i2 = string.index(">")
+     print string[i1+1:i2]
+
 server.logout()
