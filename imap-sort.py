@@ -18,3 +18,7 @@ for key in data:
      print string[i1+1:i2]
 
 server.logout()
+
+## sort n count -- needs modification
+for count, elem in sorted(((mylist.count(e), e) for e in set(mylist)), reverse=True):
+    print '%s (%d)' % (elem, count)
