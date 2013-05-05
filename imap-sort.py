@@ -1,10 +1,11 @@
+#!/bin/env python
 import sys,getpass
 from imapclient import IMAPClient
-user = ""
-pass = ''
+user = sys.argv[1]
+print 'Enter PAssword'
 ser = IMAPClient("imap.gmail.com",use_uid=True,ssl=True)
 try:
-    ser.login("user","pass")
+    ser.login(user, getpass.getpass())
 except ser.Error, e:
     print "shit happened", e
     sys.exit(1)
@@ -16,8 +17,8 @@ string = ""
 output=[]
 for key in data:
     string = data[key][akey]
-    if "@" in string:
-        i1 = string.index("@")
+    if "<" in string:
+        i1 = string.index("<")
     if ">" in string:
         i2 = string.index(">")
     try:
