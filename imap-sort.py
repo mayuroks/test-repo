@@ -1,9 +1,10 @@
 import sys,getpass
 from imapclient import IMAPClient
-
+user = ""
+pass = ''
 ser = IMAPClient("imap.gmail.com",use_uid=True,ssl=True)
 try:
-    ser.login("mayuroks","darkchaos")
+    ser.login("user","pass")
 except ser.Error, e:
     print "shit happened", e
     sys.exit(1)
