@@ -1,4 +1,5 @@
 test-repo
 =========
 
-all kinds crapCOMMIT FROM AMRUTA
+all kinds crap
+COMMIT FROM AMRUTA
