@@ -1,0 +1,7 @@
+git config -l
+git config --global user.name "name"
+git config --global user.email "email"
+
+## SSH ##
+generate ssh keys using ssh-keygen
+put public KEY in github's target-repo's settings => DEPLOY KEY
